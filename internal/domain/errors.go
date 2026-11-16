@@ -19,6 +19,11 @@ var (
 	ErrNoDate             = errors.New("у оценки должна быть дата")
 	ErrStudentNotFound    = errors.New("студент не найден")
 	ErrEvaluationNotFound = errors.New("оценка не найдена")
+
+	ErrEmptyRubric         = errors.New("в рубрикаторе нет ни одного критерия")
+	ErrForeignEvaluation   = errors.New("оценка поставлена другому студенту")
+	ErrDuplicateEvaluation = errors.New("по критерию больше одной оценки")
+	ErrFinalOutOfRange     = errors.New("итог вышел за пределы от 0 до 10")
 )
 
 func isFinite(x float64) bool {
